@@ -2,9 +2,9 @@
 title: "report"
 output: pdf_document
 ---
-# ->Simple Regression Analysis<-
-## ->Atul Lanka<-
-## ->Oct 07, 2016<-
+#                             Simple Regression Analysis
+##                                    *Atul Lanka*
+##                                   *Oct 07, 2016*
 
 ---
 
@@ -30,7 +30,7 @@ The data used for this analysis is titled `Advertising.csv` and it consists of 4
 
 In order to observe a trend between media advertising and sales, the relationship between TV advertising and sales is studied first. The linear model for this relationship is as follows:
 
-`-> Y = m*X + c <-`
+                                  `Y = m*X + c `
 
 Y denotes the TV sales whiel X denotes TV advertising budget. In order to calculate the coefficients m and c, the gradient and the y-intercept, we fit a linear regression model using the `lm()` function in R (least squares criterion). 
 
@@ -41,8 +41,7 @@ Y denotes the TV sales whiel X denotes TV advertising budget. In order to calcul
 From the `lm()` function, the regression coefficients are summarized in this table:
 
 ```{r echo = FALSE, results = 'asis'}
-library(knitr)
-kable(summary.lm, caption = "Table 1: Information about Regression Coefficients and Regression ")
+summary(lm.TV)
 ```
 
 
