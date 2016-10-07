@@ -2,13 +2,50 @@
 title: "report"
 output: pdf_document
 ---
+# ->Simple Regression Analysis<-
+## ->Atul Lanka<-
+## ->Oct 07, 2016<-
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+---
+
+## Abstract
+
+This report will perform regression analysis to reproduce the results computed and displayed in Section 3.1 *Simple Linear Regression* (Chapter 3) of the book **An Introduction to Statistical Learning**. This report will be divided into sections titled Introduction, Data, Methodology, Results and Conclusisons. At the end of this investigation, we should be abe to determine whether there exists a linear relationship between the TV Advertising budget and the subsequent sales for the product. 
+
+---
+
+## Introduction
+
+The primary goal of this analysis is to determine a linear model that exists between TV advertising and sales in order to understand an overlying trend and provide advice on how to improve on sales. Furthermore, by determining a model between TV and sales, it can help us also project sales for other media outlets, which include Radio and Newspaper. 
+
+---
+
+## Data
+
+The data used for this analysis is titled `Advertising.csv` and it consists of 4 columns - TV, Radio, Newspaper and Sales. The Sales column denotes the number of products sold in thousands of units, and the other columns denote the advertising budget in thousands of dollars for each of the three media outlets. 
+
+---
+
+## Methodology 
+
+In order to observe a trend between media advertising and sales, the relationship between TV advertising and sales is studied first. The linear model for this relationship is as follows:
+
+`-> Y = m*X + c <-`
+
+Y denotes the TV sales whiel X denotes TV advertising budget. In order to calculate the coefficients m and c, the gradient and the y-intercept, we fit a linear regression model using the `lm()` function in R (least squares criterion). 
+
+---
+
+## Results
+
+From the `lm()` function, the regression coefficients are summarized in this table:
+
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+kable(summary.lm, caption = "Table 1: Information about Regression Coefficients and Regression ")
 ```
 
-Abstract
-## R Markdown
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
