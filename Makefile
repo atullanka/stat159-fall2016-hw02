@@ -14,4 +14,4 @@ regression.RData: code/regression-script.R
 data:
 	curl -o data/Advertising.csv "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
 clean: 	
-	cd report; rm -f report.pdf
+	cd report; rm -f report/report.pdf
